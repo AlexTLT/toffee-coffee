@@ -1,5 +1,25 @@
 <?php
 
+// Link the shortcode php to stylesheet
+function toffee_coffee_enqueue_scripts() {
+	wp_enqueue_style('shortcode',plugins_url('toffee-coffee/css/style.css'));
+}
+add_action( 'wp_enqueue_scripts', 'toffee-coffee_enqueue_scripts' );
+
+
+// Add Color to the font
+
+function text_color( $atts , $content=null ) {
+	extract( shortcode_atts(
+		array('color'=>'black',
+			), $atts )
+	);
+	return '<div class="section '.$color.'">'.$content.'</div>';
+
+}
+add_shortcode( 'text_color', 'text_color' );
+
+
 // create shortcode to list all clothes which come in blue
 add_shortcode( 'tc_shortcode', 'tc_shortcode' );
 function tc_shortcode( $atts ) {
