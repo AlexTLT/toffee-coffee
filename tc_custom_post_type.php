@@ -9,7 +9,7 @@
  *Followed this tutorial: http://www.lynda.com/WordPress-tutorials/WordPress-Custom-Post-Types-Taxonomies/163113-2.html
  */
 
-function coffeetoffee_custom_postypes() {
+function tc_custom_post_types() {
 	//definining custom post type arguments - https://codex.wordpress.org/Function_Reference/register_post_type#Arguments
     $labels = array(
         'name'               => 'Reviews',
@@ -46,8 +46,8 @@ function coffeetoffee_custom_postypes() {
 	register_post_type('reviews',$args);
 }
 
-//calling my custom postype function 
-add_action('init', 'coffeetoffee_custom_postypes');
+//calling my custom post type function 
+add_action('init', 'tc_custom_post_types');
 
 function my_rewrite_flush() {
     // First, we "add" the custom post type via the above written function.
@@ -61,3 +61,10 @@ function my_rewrite_flush() {
     flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'my_rewrite_flush' );
+
+// Link to shortcode file 
+
+add_action('init', function() {
+    new tc_custom_post_types();
+    include dirname(__FILE__) . '/tc_shortcode.php';
+    });
