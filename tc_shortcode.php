@@ -19,4 +19,7 @@ add_shortcode('tc_custom_post_types', function(){
         print_r($meta);
       }
   }
+
+  return $output;
+
 });
