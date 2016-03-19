@@ -11,7 +11,7 @@ add_shortcode('tc_shortcode', function(){
   );
 
   if ($loop-> have_post() ) {
-    $output = '<ul class="tc_shortcode_loop">';
+    $output = '<ul class="reviews_list">';
 
       while ($loop-> have_post() ) {
         $loop-> the_post();
