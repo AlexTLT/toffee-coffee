@@ -11,7 +11,7 @@
 
 function coffeetoffee_custom_postypes() {
 	//definining custom post type arguments - https://codex.wordpress.org/Function_Reference/register_post_type#Arguments
-
+    $labels = array(
         'name'               => 'Reviews',
         'singular_name'      => 'Reviews',
         'menu_name'          => 'Reviews',
@@ -42,7 +42,6 @@ function coffeetoffee_custom_postypes() {
         'hierarchical'       => false,
         'menu_position'      => 5,
         'supports'           => array( 'title', 'editor', 'thumbnail', 'author' ) //what you want to see when you create a new post type 
-        'taxonomies'		 => array('category', 'post_tag' )
     );
 	register_post_type('reviews',$args);
 }
