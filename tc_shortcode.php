@@ -18,6 +18,7 @@ add_shortcode('tc_shortcode', function(){
         $meta = get_post_meta(get_the_id(), '');
         print_r($meta);
 
+
         $output .='
           <li>
               <a href="' . get_permalink() .'">
