@@ -2,16 +2,16 @@
 
 
 //calling my custom postype function
-add_shortcode('tc_custom_post_types', function(){
+add_shortcode('tc_shortcode', function(){
   $loop = new WP_Query(
     $array(
-      'post-type' => 'reviews',
+      'post-type' => 'tc_custom_post_types',
       'orderby' => 'title'
       )
   );
 
   if ($loop-> have_post() ) {
-    $output = '<ul class="tc_custom_post_types">';
+    $output = '<ul class="tc_shortcode_loop">';
 
       while ($loop-> have_post() ) {
         $loop-> the_post();
@@ -21,5 +21,8 @@ add_shortcode('tc_custom_post_types', function(){
   }
 
   return $output;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 });
