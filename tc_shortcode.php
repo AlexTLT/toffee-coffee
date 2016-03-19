@@ -4,7 +4,7 @@
 //calling my custom postype function
 add_shortcode('tc_shortcode', function(){
   $loop = new WP_Query(
-    $array(
+    array(
       'post-type' => 'reviews',
       'orderby' => 'title'
       )

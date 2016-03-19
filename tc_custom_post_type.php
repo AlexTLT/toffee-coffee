@@ -4,7 +4,7 @@
  * Plugin URI: https://phoenix.sheridanc.on.ca/~ccit3470/
  * Description: Assignment 3: create a wordpress plugin
  * Author: Alex Tsai, Chungyu Lay, Keizac Lee
- * Author URI: 
+ * Author URI:
  * Version: 1.0.1
  *Followed this tutorial: http://www.lynda.com/WordPress-tutorials/WordPress-Custom-Post-Types-Taxonomies/163113-2.html
  */
@@ -27,7 +27,7 @@ function tc_custom_post_types() {
         'not_found'          => 'No reviews found.',
         'not_found_in_trash' => 'No reviews found in Trash.',
     );
-    
+
     $args = array(
         'labels'             => $labels,
         'public'             => true,
@@ -41,18 +41,18 @@ function tc_custom_post_types() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
-        'supports'           => array( 'title', 'editor', 'thumbnail', 'author' ) //what you want to see when you create a new post type 
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'author' ) //what you want to see when you create a new post type
     );
 	register_post_type('reviews',$args);
 }
 
-//calling my custom post type function 
+//calling my custom post type function
 add_action('init', 'tc_custom_post_types');
 
 function my_rewrite_flush() {
     // First, we "add" the custom post type via the above written function.
     // Note: "add" is written with quotes, as CPTs don't get added to the DB,
-    // They are only referenced in the post_type column with a post entry, 
+    // They are only referenced in the post_type column with a post entry,
     // when you add a post of this CPT.
     tc_custom_post_types();
 
@@ -62,9 +62,8 @@ function my_rewrite_flush() {
 }
 register_activation_hook( __FILE__, 'my_rewrite_flush' );
 
-// Link to shortcode file 
+// Link to shortcode file
 
 include( plugin_dir_path( __FILE__ ) . 'tc_shortcode.php');
 
 // shortcode
-
