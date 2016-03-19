@@ -64,7 +64,5 @@ register_activation_hook( __FILE__, 'my_rewrite_flush' );
 
 // Link to shortcode file 
 
-add_action('init', function() {
-    new tc_custom_post_types();
-    include dirname(__FILE__) . '/tc_shortcode.php';
-    });
+include( plugin_dir_path( __FILE__ ) . 'tc_shortcode');
+
