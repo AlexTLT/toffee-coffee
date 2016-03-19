@@ -54,7 +54,7 @@ function my_rewrite_flush() {
     // Note: "add" is written with quotes, as CPTs don't get added to the DB,
     // They are only referenced in the post_type column with a post entry, 
     // when you add a post of this CPT.
-    coffeetoffee_custom_postypes();
+    tc_custom_post_types();
 
     // ATTENTION: This is *only* done during plugin activation hook in this example!
     // You should *NEVER EVER* do this on every page load!!
