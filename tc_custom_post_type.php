@@ -12,20 +12,20 @@
 function tc_custom_post_types() {
 	//definining custom post type arguments - https://codex.wordpress.org/Function_Reference/register_post_type#Arguments
     $labels = array(
-        'name'               => 'Reviews',
-        'singular_name'      => 'Reviews',
-        'menu_name'          => 'Reviews',
+        'name'               => 'Menu Items',
+        'singular_name'      => 'Menu',
+        'menu_name'          => 'Menu Items',
         'name_admin_bar'     => 'Reviews',
         'add_new'            => 'Add New',
-        'add_new_item'       => 'Add New Review',
-        'new_item'           => 'New Review',
-        'edit_item'          => 'Edit Review',
-        'view_item'          => 'View Review',
-        'all_items'          => 'All Reviews',
-        'search_items'       => 'Search Reviews',
-        'parent_item_colon'  => 'Parent Reviews:',
-        'not_found'          => 'No reviews found.',
-        'not_found_in_trash' => 'No reviews found in Trash.',
+        'add_new_item'       => 'Add New Menu',
+        'new_item'           => 'New Menu',
+        'edit_item'          => 'Edit Menu',
+        'view_item'          => 'View Menu',
+        'all_items'          => 'All Menu',
+        'search_items'       => 'Search Menu',
+        'parent_item_colon'  => 'Parent Menu:',
+        'not_found'          => 'No menu found.',
+        'not_found_in_trash' => 'No menu found in Trash.',
     );
 
     $args = array(
@@ -36,14 +36,14 @@ function tc_custom_post_types() {
         'show_in_menu'       => true,
         'menu_icon'          => 'dashicons-smiley', //menu icon from https://developer.wordpress.org/resource/dashicons/#smiley
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'reviews' ), //url output
+        'rewrite'            => array( 'slug' => 'menu' ), //url output
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
-        'supports'           => array( 'title', 'editor', 'thumbnail', 'author' ) //what you want to see when you create a new post type
+        'supports'           => array( 'title', 'editor', 'thumbnail' ) //what you want to see when you create a new post type
     );
-	register_post_type('reviews',$args);
+	register_post_type('menu',$args);
 }
 
 //calling my custom post type function

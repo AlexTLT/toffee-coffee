@@ -1,11 +1,11 @@
 <?php
 
-// create shortcode to list all clothes which come in blue
+// create a shortcode to display the custom post type 'menu'
 add_shortcode( 'tc_shortcode', 'tc_shortcode' );
 function tc_shortcode( $atts ) {
     ob_start();
     $query = new WP_Query( array(
-        'post_type' => 'reviews',
+        'post_type' => 'menu',
         'posts_per_page' => -1,
         'order' => 'ASC',
         'orderby' => 'title',
