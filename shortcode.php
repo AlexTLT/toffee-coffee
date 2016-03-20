@@ -24,8 +24,6 @@ function text_color( $atts , $content=null ) {
 add_shortcode( 'text_color', 'text_color' );
 
 
-// create shortcode to list all clothes which come in blue
-
 // create a shortcode to display the custom post type 'menu'
 
 add_shortcode( 'tc_shortcode', 'tc_shortcode' );
@@ -52,3 +50,19 @@ function tc_shortcode( $atts ) {
 
 		echo '</div>';
 }
+
+// Creating a button to link to the menu
+function menubutton( $atts, $content = null ) {
+        extract( shortcode_atts(
+            array(
+                'link'=>'http://google.com', // This variable is the link
+                'button_text'=>'New Menu Items', // This varible changes text inside the button
+                'button_color' => '#FFA500', // This varible changes button color
+                'text_color' => '#0059FF', // This variable changes text color
+            ), $atts ));
+        
+        return $content.'<form action= "'.$link.'"> <input type = "submit" class="menubutton" value="'.$button_text.'"style= "background-color:'.$button_color.'; color:'.$text_color.'"> </form>';
+        }
+add_shortcode('menubutton', 'menubutton');
+
+?> 
