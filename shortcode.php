@@ -1,5 +1,8 @@
 <?php
 
+echo '<div class="my_div">';
+
+
 // Link the shortcode php to stylesheet
 function toffee_coffee_enqueue_scripts() {
 	wp_enqueue_style('shortcode',plugins_url('toffee-coffee/css/style.css'));
@@ -42,4 +45,6 @@ function tc_shortcode( $atts ) {
     <?php $myvariable = ob_get_clean();
     return $myvariable;
     }
+
+		echo '</div>';
 }
