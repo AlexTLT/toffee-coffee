@@ -1,10 +1,10 @@
 /* Add font color to the paragraph */
-.section {
+.reviews-listing {
 	color: #FF0000;
 }
 
 /* Add style as background color and text and border to the link button */
-.the-link {
+.reviews-listing {
 	background-color: yellow;
 	text-align: center;  /* Add text align center to the link button */
 	padding: 5px 10px;  /* Add padding to the link button */

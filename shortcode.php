@@ -4,7 +4,7 @@
 function toffee_coffee_enqueue_scripts() {
 	wp_enqueue_style('shortcode',plugins_url('toffee-coffee/css/style.css'));
 }
-add_action( 'wp_enqueue_scripts', 'toffee-coffee_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'toffee_coffee_enqueue_scripts' );
 
 
 // Add Color to the font
