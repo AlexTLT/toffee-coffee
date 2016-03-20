@@ -5,14 +5,15 @@
 
 /* Add style as background color and text and border to the link button */
 .reviews-listing {
-	background-color: grey;
+	background-color: #e6e6e6;
 	color: white;
-	text-align: center;  /* Add text align center to the link button */
 	padding: 20px 20px;  /* Add padding to the link button */
 	border-style: solid; /* Add border line to the link button */
-    border-color: #ff0000 #0000ff; /* Add border color to the link button */
+	list-style-type:none;
+	float: left;
+
 }
 
-.my_div {
-	background-color: grey;
+.my_tc_div {
+	background-color: #e6e6e6;
 }
