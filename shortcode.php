@@ -63,4 +63,3 @@ function menubutton( $atts, $content = null ) {
 add_shortcode('menubutton', 'menubutton');
 
 add_shortcode('menubutton', 'menubutton');
-?> 
