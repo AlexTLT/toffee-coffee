@@ -15,7 +15,7 @@ class tc_menu_widget extends WP_Widget{
 // Displaying the widget
 
 	public function widget($args, $instance){
-		$title = "Recent menu items"; //Variables
+		$title = "New additions to menu"; //Variables - change the title here
 		print($args["before_widget"]);
 		if(!empty($title)){
 			print($args["before_title"] . $title . $args["after_title"]);
