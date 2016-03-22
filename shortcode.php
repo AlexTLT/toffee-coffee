@@ -51,7 +51,7 @@ function tc_shortcode( $atts ) {
 function menubutton( $atts, $content = null ) {
         extract( shortcode_atts(
             array(
-                'link'=>'http://google.com', // This variable is the link
+                'link'=>'http://phoenix.sheridanc.on.ca/~ccit3496/index.php/menu/', // This variable is the link
                 'button_text'=>'New Menu Items', // This varible changes text inside the button
                 'button_color' => '#e6e6e6', // This varible changes button color
                 'text_color' => '#000', // This variable changes text color
