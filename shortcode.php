@@ -1,9 +1,12 @@
 <?php
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/master
 // Link the shortcode php to stylesheet
 function toffee_coffee_enqueue_scripts() {
 	wp_enqueue_style('shortcode',plugins_url('toffee-coffee/css/style.css'));
@@ -48,7 +51,10 @@ function tc_shortcode( $atts ) {
     return $myvariable;
     }
 
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/master
 }
 
 // Creating a button to link to the menu
@@ -63,4 +69,9 @@ function menubutton( $atts, $content = null ) {
         
         return $content.'<form action= "'.$link.'"> <input type = "submit" class="menubutton" value="'.$button_text.'"style= "background-color:'.$button_color.'; color:'.$text_color.'"> </form>';
         }
+<<<<<<< HEAD
 add_shortcode('menubutton', 'menubutton');
+=======
+add_shortcode('menubutton', 'menubutton');
+?> 
+>>>>>>> origin/master
