@@ -20,14 +20,14 @@ function text_color( $atts , $content=null ) {
 add_shortcode( 'text_color', 'text_color' );
 
 
-// create a shortcode to display the custom post type 'menu'
+// create a self-enclosing shortcode to display the custom post type 'menu'
 
 add_shortcode( 'tc_shortcode', 'tc_shortcode' );
 function tc_shortcode( $atts ) {
     ob_start();
     $query = new WP_Query( array(
         'post_type' => 'menu',
-        'posts_per_page' => -1,
+        'posts_per_page' => 5,
         'order' => 'ASC',
         'orderby' => 'title',
     ) );
@@ -47,14 +47,14 @@ function tc_shortcode( $atts ) {
 
 }
 
-// Creating a button to link to the menu
+// Creating a button to link to the menu, also a self-enclosing shortcode
 function menubutton( $atts, $content = null ) {
         extract( shortcode_atts(
             array(
-                'link'=>'http://google.com', // This variable is the link
+                'link'=>'http://phoenix.sheridanc.on.ca/~ccit3496/index.php/menu/', // This variable is the link
                 'button_text'=>'New Menu Items', // This varible changes text inside the button
-                'button_color' => '#FFA500', // This varible changes button color
-                'text_color' => '#0059FF', // This variable changes text color
+                'button_color' => '#e6e6e6', // This varible changes button color
+                'text_color' => '#000', // This variable changes text color
             ), $atts ));
         
         return $content.'<form action= "'.$link.'"> <input type = "submit" class="menubutton" value="'.$button_text.'"style= "background-color:'.$button_color.'; color:'.$text_color.'"> </form>';
