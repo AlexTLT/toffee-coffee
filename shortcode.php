@@ -55,10 +55,10 @@ function tc_shortcode( $atts ) {
 function menubutton( $atts, $content = null ) {
         extract( shortcode_atts(
             array(
-                'link'=>'http://google.com', // This variable is the link
+                'link'=>'/menu', // This variable is the link
                 'button_text'=>'New Menu Items', // This varible changes text inside the button
-                'button_color' => '#FFA500', // This varible changes button color
-                'text_color' => '#0059FF', // This variable changes text color
+                'button_color' => '#e6e6e6', // This varible changes button color
+                'text_color' => '#000', // This variable changes text color
             ), $atts ));
         
         return $content.'<form action= "'.$link.'"> <input type = "submit" class="menubutton" value="'.$button_text.'"style= "background-color:'.$button_color.'; color:'.$text_color.'"> </form>';

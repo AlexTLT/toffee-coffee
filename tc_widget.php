@@ -22,7 +22,7 @@ class tc_menu_widget extends WP_Widget{
 		}
 ?>
 		<ul>
-			
+
 <?php
 //retriving the custom post type https://codex.wordpress.org/Class_Reference/WP_Query
 $wp_query = new WP_Query(array("post_type" => "menu", "posts_per_page" => 5)); //custom post type
@@ -47,9 +47,11 @@ $wp_query = new WP_Query(array("post_type" => "menu", "posts_per_page" => 5)); /
 }
 
 //registering the widget
-add_action("widgets_init", function( )
-{
-	register_widget("tc_menu_widget");
-});
+function register_tc_widget() {
+   register_widget('tc_menu_widget');
+}
+add_action( 'widgets_init', 'register_tc_widget' );
+
+
 
 
