@@ -60,5 +60,4 @@ function menubutton( $atts, $content = null ) {
         return $content.'<form action= "'.$link.'"> <input type = "submit" class="menubutton" value="'.$button_text.'"style= "background-color:'.$button_color.'; color:'.$text_color.'"> </form>';
         }
 add_shortcode('menubutton', 'menubutton');
-
 ?> 
