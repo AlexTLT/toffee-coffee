@@ -33,8 +33,9 @@ $wp_query = new WP_Query(array("post_type" => "menu", "posts_per_page" => 5)); /
 			{
 			$wp_query->the_post( );
 ?>
-	<li>
-		<a href="<?php the_permalink( ) ?>"><?php the_title( ) ?></a>
+	<li> 
+		<?php the_post_thumbnail("thumbnail", '250px') //adding post thumbnail functionality ?><br> 
+		<a href="<?php the_permalink( ) ?>"><?php the_title( ) //hyperlinking the custom post to the post title ?></a>
 	</li>
 <?php
 		}
